@@ -1,0 +1,139 @@
+{
+  "rules": {
+    ".read": "auth != null",
+    ".write": "auth != null",
+    "products": {
+      "$id": {
+        ".validate": "newData.hasChildren(['name','priceCOP'])",
+        "name": { 
+          ".validate": "newData.isString() && newData.val().length > 0 && newData.val().length <= 100" 
+        },
+        "priceCOP": { 
+          ".validate": "newData.isNumber() && newData.val() >= 0" 
+        },
+        "active": { 
+          ".validate": "newData.isBoolean()" 
+        },
+        "createdAt": {
+          ".validate": "newData.isNumber() || newData.val() == null"
+        },
+        "updatedAt": {
+          ".validate": "newData.isNumber() || newData.val() == null"
+        },
+        "$other": {
+          ".validate": false
+        }
+      }
+    },
+    "sales": {
+      "$id": {
+        ".validate": "newData.hasChildren(['productId','productName','unitPriceCOP','quantity','totalCOP'])",
+        "productId": { 
+          ".validate": "newData.isString() && newData.val().length > 0" 
+        },
+        "productName": { 
+          ".validate": "newData.isString() && newData.val().length > 0" 
+        },
+        "unitPriceCOP": { 
+          ".validate": "newData.isNumber() && newData.val() >= 0" 
+        },
+        "quantity": { 
+          ".validate": "newData.isNumber() && newData.val() >= 1 && newData.val() <= 1000" 
+        },
+        "totalCOP": { 
+          ".validate": "newData.isNumber() && newData.val() >= 0" 
+        },
+        "at": {
+          ".validate": "newData.isNumber() || newData.val() == null"
+        },
+        "createdBy": {
+          ".validate": "newData.isString()"
+        },
+        "$other": {
+          ".validate": false
+        }
+      }
+    },
+    "stays": {
+      "$id": {
+        ".validate": "newData.hasChildren(['guestName','rooms','checkIn','checkOut','priceCOP']) && newData.child('checkOut').val() >= newData.child('checkIn').val()",
+        "guestName": { 
+          ".validate": "newData.isString() && newData.val().length > 0 && newData.val().length <= 100" 
+        },
+        "rooms": { 
+          ".validate": "newData.isNumber() && newData.val() >= 1 && newData.val() <= 50" 
+        },
+        "checkIn": { 
+          ".validate": "newData.isNumber() && newData.val() > 0" 
+        },
+        "checkOut": { 
+          ".validate": "newData.isNumber() && newData.val() > 0" 
+        },
+        "priceCOP": { 
+          ".validate": "newData.isNumber() && newData.val() >= 0" 
+        },
+        "nights": {
+          ".validate": "newData.isNumber() && newData.val() >= 0"
+        },
+        "at": {
+          ".validate": "newData.isNumber() || newData.val() == null"
+        },
+        "createdBy": {
+          ".validate": "newData.isString()"
+        },
+        "$other": {
+          ".validate": false
+        }
+      }
+    },
+    "expenses": {
+      "$id": {
+        ".validate": "newData.hasChildren(['concept','amountCOP'])",
+        "concept": { 
+          ".validate": "newData.isString() && newData.val().length > 0 && newData.val().length <= 200" 
+        },
+        "amountCOP": { 
+          ".validate": "newData.isNumber() && newData.val() >= 0" 
+        },
+        "notes": { 
+          ".validate": "newData.isString() && newData.val().length <= 500" 
+        },
+        "at": {
+          ".validate": "newData.isNumber() || newData.val() == null"
+        },
+        "createdBy": {
+          ".validate": "newData.isString()"
+        },
+        "$other": {
+          ".validate": false
+        }
+      }
+    },
+    "settings": {
+      "hotel": {
+        ".validate": "newData.hasChildren()",
+        "currency": {
+          ".validate": "newData.isString() && newData.val() == 'COP'"
+        },
+        "locale": {
+          ".validate": "newData.isString() && newData.val() == 'es-CO'"
+        },
+        "monthlyResetDay": {
+          ".validate": "newData.isNumber() && newData.val() >= 1 && newData.val() <= 28"
+        },
+        "createdAt": {
+          ".validate": "newData.isNumber() || newData.val() == null"
+        },
+        "updatedAt": {
+          ".validate": "newData.isNumber() || newData.val() == null"
+        },
+        "$other": {
+          ".validate": false
+        }
+      }
+    },
+    "$other": {
+      ".validate": false
+    }
+  }
+}
