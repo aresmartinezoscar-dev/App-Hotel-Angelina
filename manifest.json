@@ -1,0 +1,24 @@
+{
+  "background_color": "#ffffff",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "Hotel Villa Angelina",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "Hotel Villa Angelina",
+  "start_url": "/",
+  "theme_color": "#667eea",
+  "icons": [
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTI4IiBoZWlnaHQ9IjEyOCIgdmlld0JveD0iMCAwIDEyOCA2NCIgZmlsbD0iIzY2NzhlYSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3QgeD0iMzIiIHk9IjE0IiB3aWR0aD0iNjQiIGhlaWdodD0iNDQiIHJ4PSI1IiBmaWxsPSIjZmZmIi8+Cjx0ZXh0IHg9IjY0IiB5PSIzMiIgdHlwZT0iY2xpcCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzMzNDM0IiBmb250LXNpemU9IjE1cHgiPvCfj6guL3RleHQ+Cjx0ZXh0IHg9IjY0IiB5PSI0NCIgdHlwZT0iY2xpcCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzMzNDM0IiBmb250LXNpemU9IjEwcHgiPkhvdGVsPC90ZXh0Pgo8dGV4dCB4PSI2NCIgeT0iODciIHR5cGU9ImNsaXAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiMzMzQzNCIgZm9udC1zaXplPSIxMHB4Ij5HZXN0aW9uPC90ZXh0Pgo8L3N2Zz4K",
+      "isSquare": false,
+      "isPng": false,
+      "isWebp": false,
+      "isJpg": false,
+      "width": 0,
+      "is512x512": false,
+      "is256x256": false,
+      "is192x192": false
+    }
+  ]
+}
